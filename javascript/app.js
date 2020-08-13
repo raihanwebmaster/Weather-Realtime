@@ -13,24 +13,14 @@ getCity().then(data => {
    weather.getWeather().then(data =>{
         console.log(data)
         ui.paint(data);
-   }).catch(err => {
-        console.log(err);
-        ui.notFound();
-    });
+   });
 
 });
 document.getElementById('w-change-btn').addEventListener('click', ()=> {
     const city = document.getElementById('city').value;
-    if(city === ''){
-        alert('You Must a Valid City Name');
-    }else{
-        const weather = new Weather (city);
+    const weather = new Weather (city);
     weather.getWeather().then(data =>{
             console.log(data)
             ui.paint(data);
-    }).catch(err => {
-        console.log(err);
-        ui.notFound();
     });
-    }
 });
