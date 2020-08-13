@@ -6,33 +6,33 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+<!-- custom js -->
     <script src="javascript/weather.js" defer ></script>
     <script src="javascript/ui.js" defer ></script>
     <script src="javascript/app.js" defer ></script>
     <title>Weather App</title>
 </head>
 <body>
-<div>
-    <div class="container  ">
-        <div class="row d-flex justify-content-center align-items-center  ">
-           <div class=" col-sm-4 col-md-5  text-center  bg-images rounded ">
-              <div>
-                <h1 id="w-location" class="text-light">city</h1>
-                <h3 id="w-desc" class="text-light">city</h3>
-                <h3 id="w-string" class="text-light">city</h3>
+    <section class="container">
+        <div class="row justify-content-center">
+           <div class="col-8 col-sm-6 col-md-6 ">
+              <div class="bg-images text-center">
+                <h1 id="w-location" class="text-white"></h1>
+                <h3 id="w-desc" class="text-white"></h3>
+                <h3 id="w-string" class="text-white"></h3>
                 <img id="w-icon" src="" alt="">
                 <ul class="list-group mt-3" id="w-details">
-                     <li class="list-group-item mb-02 bg-dark" id="w-humidity">ghfghfghdfgh</li>
-                     <li class="list-group-item mb-02 bg-dark" id="w-pressure"></li>
-                     <li class="list-group-item mb-02 bg-dark" id="w-wind"></li>
+                <li class="list-group-item mb-02 bg-dark text-white" id="w-humidity"></li>
+                <li class="list-group-item mb-02 bg-dark text-white" id="w-pressure"></li>
+                <li class="list-group-item mb-02 bg-dark text-white" id="w-wind"></li>
                 </ul>
                 <hr>
                 <button type="button" class="btn button-edit text-light" data-toggle="modal" data-target="#exampleModal"> Change Location</button>
               </div>
-           </div> 
+           </div>
         </div>
-    </div>
-</div>
+    </section>
+<!-- bootstrap modal fade -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -51,11 +51,13 @@
                 </form>
             </div>
             <div class="modal-footer">
-              <button type="button" id="w-change-btn" class="btn btn-primary button-edit">Save changes</button>
+              <button type="button" data-dismiss="modal" id="w-change-btn" class="btn btn-primary "> changes</button>
             </div>
           </div>
         </div>
       </div>
+
+<!-- external script  -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
