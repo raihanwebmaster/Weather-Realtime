@@ -21,7 +21,10 @@ getCity().then(data => {
 });
 document.getElementById('w-change-btn').addEventListener('click', ()=> {
     const city = document.getElementById('city').value;
-    const weather = new Weather (city);
+    if(city === ''){
+        alert('You Must a Valid City Name');
+    }else{
+        const weather = new Weather (city);
     weather.getWeather().then(data =>{
             console.log(data)
             ui.paint(data);
@@ -29,4 +32,5 @@ document.getElementById('w-change-btn').addEventListener('click', ()=> {
         console.log(err);
         ui.notFound();
     });
+    }
 });
