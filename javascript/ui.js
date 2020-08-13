@@ -18,13 +18,13 @@ class UI {
         this.pressure.textContent = "Air Pressure: " +weather.main.pressure + "";
         
     }
-    // notFound(){
-    //     this.location.textContent = 'NOT FOUND';
-    //     this.desc.textContent = "";
-    //     this.string.textContent= "";
-    //     this.icon.src= ``;
-    //     this.humidity.textContent= "";
-    //     this.wind.textContent= "";
-    //     this.pressure.textContent= "";
-    // }
+    notFound(){
+        this.location.textContent = 'NOT FOUND';
+        this.desc.textContent = "";
+        this.string.textContent= "";
+        this.icon.src= ``;
+        this.humidity.textContent= "";
+        this.wind.textContent= "";
+        this.pressure.textContent= "";
+    }
 };
