@@ -13,7 +13,10 @@ getCity().then(data => {
    weather.getWeather().then(data =>{
         console.log(data)
         ui.paint(data);
-   });
+   }).catch(err => {
+        console.log(err);
+        ui.notFound();
+    });
 
 });
 document.getElementById('w-change-btn').addEventListener('click', ()=> {
@@ -22,5 +25,8 @@ document.getElementById('w-change-btn').addEventListener('click', ()=> {
     weather.getWeather().then(data =>{
             console.log(data)
             ui.paint(data);
+    }).catch(err => {
+        console.log(err);
+        ui.notFound();
     });
 });
